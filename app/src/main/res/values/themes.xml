@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CarApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- Define theme colors -->
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/lay_back_color</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/view_back_color</item>
+        <item name="colorSecondaryVariant">@color/stroke_color</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.CarApp" parent="Base.Theme.CarApp" />
+
+    <style name="BottomNavigationTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/selected_color</item>
+        <item name="android:textColorSecondary">@color/main_icon_color</item>
+    </style>
+
+
+    <style name="TransparentDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+</resources>

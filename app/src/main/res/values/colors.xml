@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="lay_back_color">#151924</color>
+    <color name="stroke_color">#434955</color>
+    <color name="agree_text_color">#48ABD2</color>
+    <color name="back_color">#367270</color>
+    <color name="view_back_color">#5C6069</color>
+    <color name="main_icon_color">#FFFADD</color>
+    <color name="selected_color">#3456A1</color>
+
+
+    <color name="red">#ed0000</color>
+    <color name="grey">#2c2c2c</color>
+
+    <color name="background">#1d1d1d</color>
+    <color name="grey_divider">#5e6066</color>
+    <color name="text_yellow">#fff1ce</color>
+    <color name="text_grey">#777777</color>
+    <color name="tab_blue">#151923</color>
+    <color name="bg_light_grey">#2e3139</color>
+    <color name="bg_dark_grey">#151923</color>
+    <color name="text_blue">#47d9bf</color>
+    <color name="text_red">#dc4738</color>
+    <color name="bg_grey">#40434b</color>
+    <color name="bg_grey_pressed">#585a62</color>
+    <color name="bg_widget">#401a202f</color>
+    <color name="bg_category">#40434b</color>
+
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_back">
+
+    <TextView
+        android:id="@+id/tv_attempts_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/please_enter_your_car_4_digit_passcode"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="@color/text_grey"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_attempts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/you_have_4_attempts"
+        android:textSize="14sp"
+        android:textColor="@color/text_grey"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/tv_attempts_info"/>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/tv_attempts"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/imageButton1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/button_one"
+            android:src="@drawable/but_1_pressed" />
+
+        <ImageView
+            android:id="@+id/imageButton2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/button_tne"
+            android:src="@drawable/but_2_pressed" />
+
+        <ImageView
+            android:id="@+id/imageButton3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/button_three"
+            android:src="@drawable/but_3_pressed" />
+
+        <ImageView
+            android:id="@+id/imageButton4"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/button_four"
+            android:src="@drawable/but_4_pressed" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/cancel"
+        android:textSize="18sp"
+        android:textColor="@color/text_yellow"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/button_layout"/>
+
+</RelativeLayout>
