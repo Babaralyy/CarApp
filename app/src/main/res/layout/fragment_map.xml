@@ -49,6 +49,7 @@
 
 
     <RelativeLayout
+        android:id="@+id/eng_lay"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:background="@drawable/d_shape"
@@ -72,11 +73,43 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="3dp"
             android:layout_marginBottom="3dp"
-            android:text="km/h"
+            android:text="@string/km_h"
             android:layout_alignParentEnd="true"
             android:textColor="@color/main_icon_color"
             android:textSize="18sp"
             android:layout_below="@id/tv_speed"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/heb_lay"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/d_shape_two"
+        app:layout_constraintBottom_toTopOf="@+id/address_lay"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:id="@+id/tv_speed_heb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="3dp"
+            android:text="0"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/main_icon_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_km_speed_heb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="@string/km_h"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/main_icon_color"
+            android:textSize="18sp"
+            android:layout_below="@id/tv_speed_heb"/>
 
     </RelativeLayout>
 
@@ -110,7 +143,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginBottom="15dp"
-            android:text="Aylon Mall/Aba Hillel Road, Ramat Gan, Israel"
+            android:text="@string/aylon_mall_aba_hillel_road_ramat_gan_israel"
             android:textColor="@color/text_yellow"
             android:textSize="18sp"
             app:layout_constraintEnd_toStartOf="@+id/iv_car_petrol"

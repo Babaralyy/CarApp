@@ -52,7 +52,7 @@
     <string name="button_tne">Button tne</string>
     <string name="button_three">Button three</string>
     <string name="button_four">Button four</string>
-    <string name="cancel">Cancel</string>
+    <string name="cancel">CANCEL</string>
     <string name="you_have_4_attempts">You have 4 attempts</string>
     <string name="please_enter_your_car_4_digit_passcode">Please enter your car 4 digit Passcode.</string>
     <string name="_23_30">23:30</string>
@@ -67,4 +67,7 @@
     <string name="_28_kph">28 kph</string>
     <string name="information">Information</string>
     <string name="tow_mode">Tow Mode</string>
+    <string name="_110_km_h">110 km/h</string>
+    <string name="km_h">km/h</string>
+    <string name="trip_map">Trip Map</string>
 </resources>

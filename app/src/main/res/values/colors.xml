@@ -14,6 +14,7 @@
 
     <color name="red">#ed0000</color>
     <color name="grey">#2c2c2c</color>
+    <color name="bg_light">#6280B6</color>
 
     <color name="background">#1d1d1d</color>
     <color name="grey_divider">#5e6066</color>

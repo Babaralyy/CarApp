@@ -2,7 +2,13 @@ package com.car.carapp.ui.fragments
 
 import android.annotation.SuppressLint
 import android.app.Dialog
+import android.content.res.Resources
+import android.graphics.Typeface
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.ForegroundColorSpan
+import android.text.style.StyleSpan
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -10,6 +16,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.car.carapp.R
@@ -17,6 +24,7 @@ import com.car.carapp.databinding.ConfirmDialogLayBinding
 import com.car.carapp.databinding.FragmentMainBinding
 import com.car.carapp.utils.Constants
 import com.car.carapp.utils.Constants.TAG
+import java.util.Locale
 
 
 class MainFragment : Fragment() {
@@ -54,7 +62,7 @@ class MainFragment : Fragment() {
                 Constants.mainClick = Constants.LOCATION
                 findNavController().navigate(MainFragmentDirections.actionMainFragmentToDetailsFragment())
             } catch (e: Exception) {
-                Log.i(Constants.TAG, "exception:: ${e.message}")
+                Log.i(TAG, "exception:: ${e.message}")
             }
         }
 
@@ -63,7 +71,7 @@ class MainFragment : Fragment() {
                 showConfirmDialog("History")
 
             } catch (e: Exception) {
-                Log.i(Constants.TAG, "exception:: ${e.message}")
+                Log.i(TAG, "exception:: ${e.message}")
             }
         }
 
@@ -71,15 +79,28 @@ class MainFragment : Fragment() {
             showConfirmDialog("Settings")
         }
 
-        mBinding.ivTakeCar.setOnClickListener {
+
+        val layoutParams = mBinding.tvSpeedNumber.layoutParams as ViewGroup.MarginLayoutParams
+
+        val detectedLanguage = getDeviceLanguage()
+
+        if (detectedLanguage == "iw") {
+            layoutParams.marginEnd = 8.dpToPx()
+            mBinding.tvSpeedNumber.layoutParams = layoutParams
+        } else {
+            layoutParams.marginStart = 8.dpToPx()
+            mBinding.tvSpeedNumber.layoutParams = layoutParams
         }
 
-        mBinding.ivCarSpeed.setOnClickListener {
+    }
 
-        }
+    // Extension function to convert dp to px
+    private fun Int.dpToPx(): Int {
+        return (this * Resources.getSystem().displayMetrics.density).toInt()
     }
 
     private fun showConfirmDialog(s: String) {
+
 
         val bottomBinding = ConfirmDialogLayBinding.inflate(layoutInflater)
 
@@ -102,7 +123,45 @@ class MainFragment : Fragment() {
         setTouchListener(bottomBinding.imageButton3, 2, dialog, s)
         setTouchListener(bottomBinding.imageButton4, 3, dialog, s)
 
+        setColorOnText(bottomBinding)
+
+        dialog.window?.decorView?.layoutDirection = View.LAYOUT_DIRECTION_LTR
+
         dialog.show()
+    }
+
+    private fun setColorOnText(bottomBinding: ConfirmDialogLayBinding) {
+
+        val text = getString(R.string.you_have_4_attempts)
+        val spannableString = SpannableString(text)
+
+        // Define the color you want to use
+        val color = ContextCompat.getColor(
+            requireContext(),
+            R.color.text_yellow
+        )
+
+        val start = text.indexOf("4")
+        val end = start + 1
+
+        // Apply the color span
+        spannableString.setSpan(
+            ForegroundColorSpan(color),
+            start,
+            end,
+            Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+
+        // Apply the bold style span
+        spannableString.setSpan(
+            StyleSpan(Typeface.BOLD),
+            start,
+            end,
+            Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+
+        bottomBinding.tvAttempts.text = spannableString
+
     }
 
 
@@ -112,10 +171,10 @@ class MainFragment : Fragment() {
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
                     (v as ImageView).setImageResource(pressedImages[index])
-                    if (index == 3){
+                    if (index == 3) {
                         try {
-                            performAction(index, dialog, s)
-                        }catch (e: Exception){
+                            performAction(dialog, s)
+                        } catch (e: Exception) {
                             Log.i(TAG, "setTouchListener: ${e.message}")
                         }
 
@@ -134,7 +193,7 @@ class MainFragment : Fragment() {
         }
     }
 
-    private fun performAction(index: Int, dialog: Dialog, s: String) {
+    private fun performAction(dialog: Dialog, s: String) {
         dialog.dismiss()
         if (s == "History") {
             Constants.mainClick = Constants.HISTORY
@@ -143,5 +202,9 @@ class MainFragment : Fragment() {
             Constants.mainClick = Constants.SETTINGS
             findNavController().navigate(MainFragmentDirections.actionMainFragmentToDetailsFragment())
         }
+    }
+
+    private fun getDeviceLanguage(): String {
+        return Locale.getDefault().language
     }
 }

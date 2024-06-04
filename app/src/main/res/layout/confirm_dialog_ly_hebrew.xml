@@ -39,18 +39,11 @@
         android:gravity="center_horizontal">
 
         <ImageView
-            android:id="@+id/imageButton1"
+            android:id="@+id/imageButton4"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:contentDescription="@string/button_one"
-            android:src="@drawable/but_1_pressed" />
-
-        <ImageView
-            android:id="@+id/imageButton2"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:contentDescription="@string/button_tne"
-            android:src="@drawable/but_2_pressed" />
+            android:contentDescription="@string/button_four"
+            android:src="@drawable/but_4_pressed" />
 
         <ImageView
             android:id="@+id/imageButton3"
@@ -60,12 +53,18 @@
             android:src="@drawable/but_3_pressed" />
 
         <ImageView
-            android:id="@+id/imageButton4"
+            android:id="@+id/imageButton2"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:contentDescription="@string/button_four"
-            android:src="@drawable/but_4_pressed" />
+            android:contentDescription="@string/button_tne"
+            android:src="@drawable/but_2_pressed" />
 
+        <ImageView
+            android:id="@+id/imageButton1"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="@string/button_one"
+            android:src="@drawable/but_1_pressed" />
     </LinearLayout>
 
     <TextView

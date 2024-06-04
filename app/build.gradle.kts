@@ -61,4 +61,11 @@ dependencies {
 
     //Maps
     implementation(libs.play.services.maps)
+
+    // retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+    implementation(libs.okhttp)
+    implementation(libs.gson)
 }

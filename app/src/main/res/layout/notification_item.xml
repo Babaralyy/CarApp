@@ -3,15 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
+    android:layout_marginTop="15dp"
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp"
+    android:padding="3dp"
     android:background="@drawable/report_back">
 
     <ImageView
         android:id="@+id/iv_info"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginStart="10dp"
         android:contentDescription="@string/information"
         app:srcCompat="@drawable/ic_info"
@@ -26,8 +27,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:text="@string/tow_mode"
-        android:textColor="@color/text_yellow"
-        android:textSize="20sp"
+        android:textColor="@color/text_grey"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/iv_info"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -37,9 +38,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
         android:text="@string/sun_12_05_2024"
         android:textColor="@color/text_yellow"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@id/iv_info"
         app:layout_constraintTop_toBottomOf="@id/tv_tow" />
 
@@ -49,9 +51,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
         android:text="@string/rf9r_88_tahouitet_el_ghadir_lebanon"
         android:textColor="@color/text_yellow"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@id/iv_info"
         app:layout_constraintTop_toBottomOf="@id/tv_date"
         app:layout_constraintBottom_toBottomOf="parent"/>
