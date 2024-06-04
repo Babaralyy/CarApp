@@ -3,7 +3,6 @@ package com.car.carapp.ui.fragments
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
-import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -22,7 +21,6 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -52,7 +50,6 @@ class MapFragment : Fragment(), OnMapReadyCallback {
         // Start the coroutine
         CoroutineScope(Dispatchers.Main).launch {
             withContext(Dispatchers.IO) {
-                // Simulate some background work
                 delay(1000) // Adjust the delay as per your requirement
             }
 

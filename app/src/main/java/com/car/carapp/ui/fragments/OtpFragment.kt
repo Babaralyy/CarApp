@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.car.carapp.R
 import com.car.carapp.databinding.FragmentOtpBinding
 import com.car.carapp.utils.Constants
 

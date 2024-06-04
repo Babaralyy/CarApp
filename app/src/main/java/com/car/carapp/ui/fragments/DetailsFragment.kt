@@ -78,6 +78,7 @@ class DetailsFragment : Fragment() {
 
         }
         mBinding.tabReport.setOnClickListener {
+            Constants.mainClick = Constants.HISTORY
             replaceFragment(ReportFragment())
             updateTab(mBinding.tabReport, R.drawable.tab_report_selected)
         }

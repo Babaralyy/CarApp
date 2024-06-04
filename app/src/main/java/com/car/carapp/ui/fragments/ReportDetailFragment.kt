@@ -17,7 +17,6 @@ import com.car.carapp.utils.Constants
 class ReportDetailFragment : Fragment(), ReportCallback {
 
     private lateinit var reportDetailAdapter: ReportDetailAdapter
-    private lateinit var  reportDetailsList: MutableList<ReportDetailData>
 
     private lateinit var mBinding: FragmentReportDetailBinding
     override fun onCreateView(
@@ -32,7 +31,6 @@ class ReportDetailFragment : Fragment(), ReportCallback {
     }
 
     private fun inIt() {
-        reportDetailsList = arrayListOf()
         mBinding.rvReportDetails.layoutManager = LinearLayoutManager(requireContext())
         setUpAdapter()
 
@@ -42,14 +40,14 @@ class ReportDetailFragment : Fragment(), ReportCallback {
     }
 
     private fun setUpAdapter() {
-        reportDetailsList.clear()
-
-        reportDetailsList.add(ReportDetailData("", false))
-        reportDetailsList.add(ReportDetailData("", false))
-        reportDetailsList.add(ReportDetailData("", true))
-        reportDetailsList.add(ReportDetailData("", true))
-        reportDetailsList.add(ReportDetailData("", false))
-        reportDetailsList.add(ReportDetailData("", false))
+        val reportDetailsList = mutableListOf(
+            ReportDetailData("", false),
+            ReportDetailData("", false),
+            ReportDetailData("", true),
+            ReportDetailData("", true),
+            ReportDetailData("", false),
+            ReportDetailData("", false)
+        )
 
         reportDetailAdapter = ReportDetailAdapter(reportDetailsList, requireContext(), this)
         mBinding.rvReportDetails.adapter = reportDetailAdapter

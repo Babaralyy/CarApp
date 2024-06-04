@@ -20,15 +20,21 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
+
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "ApiKey", project.properties["Map_ApiKey"].toString())
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField("String", "ApiKey", project.properties["Map_ApiKey"].toString())
         }
     }
     compileOptions {

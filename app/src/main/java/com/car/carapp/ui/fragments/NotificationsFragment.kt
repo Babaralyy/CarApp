@@ -6,11 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.car.carapp.R
 import com.car.carapp.databinding.FragmentNotificationsBinding
-import com.car.carapp.datamodels.ReportDetailData
 import com.car.carapp.ui.adapters.NotificationAdapter
-import com.car.carapp.ui.adapters.ReportDetailAdapter
 
 
 class NotificationsFragment : Fragment() {
@@ -39,15 +36,8 @@ class NotificationsFragment : Fragment() {
     }
 
     private fun setUpAdapter() {
-        notList.clear()
-
-        notList.add("")
-        notList.add("")
-        notList.add("")
-        notList.add("")
-        notList.add("")
-
-        notificationAdapter = NotificationAdapter(notList, requireContext())
+        val emptyItems = List(5) { "" }
+        notificationAdapter = NotificationAdapter(emptyItems.toMutableList(), requireContext())
         mBinding.rvNotifications.adapter = notificationAdapter
     }
 }

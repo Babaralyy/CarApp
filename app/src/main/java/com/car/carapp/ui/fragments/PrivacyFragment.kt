@@ -1,15 +1,12 @@
 package com.car.carapp.ui.fragments
 
-import android.os.Build
+
 import android.os.Bundle
-import android.text.Html
 import android.text.SpannableString
-import android.text.Spanned
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebViewClient
-import androidx.core.text.HtmlCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.car.carapp.databinding.FragmentPrivacyBinding
