@@ -26,26 +26,28 @@ class DetailsFragment : Fragment() {
         return mBinding.root
     }
 
-
-
     private fun inIt() {
         setUpBottomNav()
 
-        when(Constants.mainClick){
+        when (Constants.mainClick) {
             Constants.LOCATION -> {
                 replaceFragment(MapFragment())
                 updateTab(mBinding.tabMap, R.drawable.tab_map_selected)
             }
+
             Constants.HISTORY -> {
                 replaceFragment(ReportFragment())
                 updateTab(mBinding.tabReport, R.drawable.tab_report_selected)
             }
+
             Constants.TAKE -> {
 
             }
+
             Constants.SPEED -> {
 
             }
+
             Constants.SETTINGS -> {
                 replaceFragment(SettingsFragment())
                 updateTab(mBinding.tabSettings, R.drawable.menu_settings_selected)
