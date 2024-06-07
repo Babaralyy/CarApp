@@ -82,6 +82,7 @@ class MainFragment : Fragment() {
 
             val url =  "https://www.google.com/maps/place/Tel+Aviv"
 
+
             val intent = Intent(Intent.ACTION_VIEW).apply {
                 data = Uri.parse(url)
             }
