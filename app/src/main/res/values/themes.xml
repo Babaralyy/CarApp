@@ -26,5 +26,11 @@
         <item name="android:backgroundDimEnabled">false</item>
     </style>
 
+    <style name="SelectionSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#2CCF09</item>
+
+        <item name="android:colorForeground">@color/white</item>
+    </style>
+
 
 </resources>

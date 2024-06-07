@@ -2,8 +2,10 @@ package com.car.carapp.ui.fragments
 
 import android.annotation.SuppressLint
 import android.app.Dialog
+import android.content.Intent
 import android.content.res.Resources
 import android.graphics.Typeface
+import android.net.Uri
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.Spanned
@@ -16,6 +18,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -72,6 +75,24 @@ class MainFragment : Fragment() {
 
             } catch (e: Exception) {
                 Log.i(TAG, "exception:: ${e.message}")
+            }
+        }
+
+        mBinding.ivTakeCar.setOnClickListener {
+
+            val url =  "https://www.google.com/maps/place/Tel+Aviv"
+
+            val intent = Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse(url)
+            }
+
+            // Check if there's an application that can handle this intent
+            if (intent.resolveActivity(requireActivity().packageManager) != null) {
+                startActivity(intent)
+            } else {
+                // Handle the case where no application can handle the intent
+                // For example, show a toast message
+                Toast.makeText(requireContext(), "No application can handle this request.", Toast.LENGTH_SHORT).show()
             }
         }
 

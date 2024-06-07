@@ -63,12 +63,15 @@
                 android:layout_centerVertical="true"/>
 
             <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/material_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:layout_alignParentEnd="true"
-                app:thumbTint="@color/white"
-                app:trackTint="@color/bg_dark_grey"/>
+                android:layout_centerVertical="true"
+                android:theme="@style/SelectionSwitch"
+                app:trackTint="@color/bg_dark_grey"
+                android:checked="false"/>
 
             <View
                 android:layout_width="match_parent"

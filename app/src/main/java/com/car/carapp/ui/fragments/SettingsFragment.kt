@@ -27,6 +27,13 @@ class SettingsFragment : Fragment() {
     }
 
     private fun inIt() {
+
+        mBinding.materialSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked){
+
+            }
+        }
+
         mBinding.contactLay.setOnClickListener {
             try {
                 findNavController().navigate(DetailsFragmentDirections.actionDetailsFragmentToContactFragment())

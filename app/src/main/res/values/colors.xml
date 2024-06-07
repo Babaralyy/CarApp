@@ -30,4 +30,11 @@
     <color name="bg_widget">#401a202f</color>
     <color name="bg_category">#40434b</color>
 
+    <color name="switch_track_on_color">@color/bg_dark_grey</color>
+    <color name="switch_thumb_on_color">#55DB02</color>
+    <color name="switch_track_off_color">@color/bg_dark_grey</color>
+    <color name="switch_thumb_off_color">@color/white</color>
+
+
+
 </resources>

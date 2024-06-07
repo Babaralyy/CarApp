@@ -114,13 +114,15 @@ class ReportMapFragment : Fragment(), OnMapReadyCallback {
                                 .icon(endMarker)
                         )
 
-                        val routePoints =
-                            response.body()?.routes?.get(0)?.overview_polyline?.points?.let {
-                                decodePolyline(
-                                    it
-                                )
-                            }
-                        routePoints?.let { drawPolyline(it) }
+                        if(response.body()?.routes?.isNotEmpty() == true){
+                            val routePoints =
+                                response.body()?.routes?.get(0)?.overview_polyline?.points?.let {
+                                    decodePolyline(
+                                        it
+                                    )
+                                }
+                            routePoints?.let { drawPolyline(it) }
+                        }
                     }
                 }
             } catch (e: IOException) {

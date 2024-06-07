@@ -8,4 +8,5 @@ object Constants {
     const val TAKE = 3
     const val SPEED = 4
     const val SETTINGS = 5
+    const val NOTIFICATION = 6
 }

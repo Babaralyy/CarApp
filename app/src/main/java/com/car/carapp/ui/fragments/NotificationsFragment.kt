@@ -1,16 +1,20 @@
 package com.car.carapp.ui.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.car.carapp.callback.NotificationCallback
 import com.car.carapp.databinding.FragmentNotificationsBinding
 import com.car.carapp.ui.adapters.NotificationAdapter
+import com.car.carapp.utils.Constants.TAG
 
 
-class NotificationsFragment : Fragment() {
+class NotificationsFragment : Fragment(), NotificationCallback {
 
     private lateinit var notificationAdapter: NotificationAdapter
     private lateinit var notList: MutableList<String>
@@ -35,9 +39,19 @@ class NotificationsFragment : Fragment() {
         setUpAdapter()
     }
 
+    override fun onNotificationClick() {
+        try {
+            findNavController().navigate(DetailsFragmentDirections.actionDetailsFragmentToNotificationDetailFragment())
+        }catch (e: Exception){
+            Log.i(TAG, "onNotificationClick:: ${e.message}")
+        }
+    }
+
     private fun setUpAdapter() {
         val emptyItems = List(5) { "" }
-        notificationAdapter = NotificationAdapter(emptyItems.toMutableList(), requireContext())
+        notificationAdapter = NotificationAdapter(emptyItems.toMutableList(), requireContext(), this)
         mBinding.rvNotifications.adapter = notificationAdapter
     }
+
+
 }

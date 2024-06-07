@@ -52,6 +52,10 @@ class DetailsFragment : Fragment() {
                 replaceFragment(SettingsFragment())
                 updateTab(mBinding.tabSettings, R.drawable.menu_settings_selected)
             }
+            Constants.NOTIFICATION -> {
+                replaceFragment(NotificationsFragment())
+                updateTab(mBinding.tabAlert, R.drawable.tab_alert_selected)
+            }
         }
 
     }
@@ -85,6 +89,7 @@ class DetailsFragment : Fragment() {
             updateTab(mBinding.tabReport, R.drawable.tab_report_selected)
         }
         mBinding.tabAlert.setOnClickListener {
+            Constants.mainClick = Constants.NOTIFICATION
             replaceFragment(NotificationsFragment())
             updateTab(mBinding.tabAlert, R.drawable.tab_alert_selected)
         }

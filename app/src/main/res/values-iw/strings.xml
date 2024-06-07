@@ -77,4 +77,5 @@
     <string name="km_h">קמ"ש</string>
     <string name="trip_map">מפת טיול</string>
     <string name="google_maps_api_key" translatable="false">${ApiKey}</string>
+    <string name="avshalom_gissin_st_11_petahtikva_israel">Avshalom Gissin St 11, PetahTikva, Israel</string>
 </resources>
