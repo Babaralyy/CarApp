@@ -1,4 +1,4 @@
-package com.cobra.carapp.ui.fragments
+package com.cobra.connect.ui.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -8,11 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.cobra.carapp.callback.ReportCallback
-import com.cobra.carapp.databinding.FragmentReportDetailBinding
-import com.cobra.carapp.datamodels.ReportDetailData
-import com.cobra.carapp.ui.adapters.ReportDetailAdapter
-import com.cobra.carapp.utils.Constants
+import com.cobra.connect.callback.ReportCallback
+import com.cobra.connect.databinding.FragmentReportDetailBinding
+import com.cobra.connect.datamodels.ReportDetailData
+import com.cobra.connect.ui.adapters.ReportDetailAdapter
+import com.cobra.connect.utils.Constants
 
 class ReportDetailFragment : Fragment(), ReportCallback {
 

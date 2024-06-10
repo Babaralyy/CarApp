@@ -5,6 +5,7 @@
         <!-- Define theme colors -->
         <item name="colorPrimaryVariant">@color/black</item>
         <item name="colorOnPrimary">@color/lay_back_color</item>
+
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/view_back_color</item>
         <item name="colorSecondaryVariant">@color/stroke_color</item>
@@ -28,9 +29,7 @@
 
     <style name="SelectionSwitch" parent="Theme.AppCompat.Light">
         <item name="colorControlActivated">#2CCF09</item>
-
         <item name="android:colorForeground">@color/white</item>
     </style>
-
 
 </resources>

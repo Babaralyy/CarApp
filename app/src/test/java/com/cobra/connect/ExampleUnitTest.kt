@@ -1,4 +1,4 @@
-package com.cobra.carapp
+package com.cobra.connect
 
 import org.junit.Test
 

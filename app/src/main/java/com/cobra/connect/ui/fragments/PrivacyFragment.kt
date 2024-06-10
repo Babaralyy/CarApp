@@ -1,4 +1,4 @@
-package com.cobra.carapp.ui.fragments
+package com.cobra.connect.ui.fragments
 
 
 import android.os.Bundle
@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.cobra.carapp.databinding.FragmentPrivacyBinding
+import com.cobra.connect.databinding.FragmentPrivacyBinding
 
 
 class PrivacyFragment : Fragment() {

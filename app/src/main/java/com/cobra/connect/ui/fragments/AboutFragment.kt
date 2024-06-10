@@ -1,4 +1,4 @@
-package com.cobra.carapp.ui.fragments
+package com.cobra.connect.ui.fragments
 
 import android.os.Bundle
 import android.text.SpannableString
@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.cobra.carapp.databinding.FragmentAboutBinding
+import com.cobra.connect.databinding.FragmentAboutBinding
 
 
 class AboutFragment : Fragment() {

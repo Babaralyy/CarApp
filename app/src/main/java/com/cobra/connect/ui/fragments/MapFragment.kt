@@ -1,4 +1,4 @@
-package com.cobra.carapp.ui.fragments
+package com.cobra.connect.ui.fragments
 
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -10,9 +10,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
-import com.cobra.carapp.R
-import com.cobra.carapp.databinding.FragmentMapBinding
-import com.cobra.carapp.utils.Constants.TAG
+import com.cobra.connect.R
+import com.cobra.connect.databinding.FragmentMapBinding
+import com.cobra.connect.utils.Constants.TAG
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback

@@ -1,3 +1,3 @@
-package com.cobra.carapp.datamodels
+package com.cobra.connect.datamodels
 
 data class ReportDetailData (val text: String, val isWeekend: Boolean)

@@ -1,4 +1,4 @@
-package com.cobra.carapp.ui.fragments
+package com.cobra.connect.ui.fragments
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -6,18 +6,20 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.core.os.BuildCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.cobra.carapp.BuildConfig
-import com.cobra.carapp.R
-import com.cobra.carapp.databinding.FragmentReportMapBinding
-import com.cobra.carapp.datamodels.DirectionsClient
-import com.cobra.carapp.network.ApiCall
-import com.cobra.carapp.ui.activities.MainActivity
+import com.cobra.connect.R
+import com.cobra.connect.databinding.FragmentReportMapBinding
+import com.cobra.connect.datamodels.DirectionsClient
+import com.cobra.connect.network.ApiCall
+import com.cobra.connect.ui.activities.MainActivity
+import com.cobra.connect.utils.Constants
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -89,7 +91,7 @@ class ReportMapFragment : Fragment(), OnMapReadyCallback {
                     "${destination.latitude},${destination.longitude}",
                     false,
                     "driving",
-                    BuildConfig.ApiKey
+                    getString(R.string.map_api_key)
                 )?.execute()
 
                 withContext(Dispatchers.Main) {
@@ -113,7 +115,7 @@ class ReportMapFragment : Fragment(), OnMapReadyCallback {
                                 .title("Marker 2")
                                 .icon(endMarker)
                         )
-
+                        Log.i(Constants.TAG, "fetchRoute:: ${response.body()?.routes}")
                         if(response.body()?.routes?.isNotEmpty() == true){
                             val routePoints =
                                 response.body()?.routes?.get(0)?.overview_polyline?.points?.let {

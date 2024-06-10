@@ -1,4 +1,4 @@
-package com.cobra.carapp.datamodels
+package com.cobra.connect.datamodels
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

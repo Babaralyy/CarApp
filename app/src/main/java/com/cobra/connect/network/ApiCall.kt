@@ -1,6 +1,6 @@
-package com.cobra.carapp.network
+package com.cobra.connect.network
 
-import com.cobra.carapp.datamodels.DirectionsResponse
+import com.cobra.connect.datamodels.DirectionsResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

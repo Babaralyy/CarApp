@@ -1,11 +1,11 @@
-package com.cobra.carapp.ui.adapters
+package com.cobra.connect.ui.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.cobra.carapp.callback.NotificationCallback
-import com.cobra.carapp.databinding.NotificationItemBinding
+import com.cobra.connect.callback.NotificationCallback
+import com.cobra.connect.databinding.NotificationItemBinding
 
 class NotificationAdapter(
     private val notList: MutableList<String>,

@@ -1,4 +1,4 @@
-package com.cobra.carapp.utils
+package com.cobra.connect.utils
 
 object Constants {
     const val TAG = "CarApp"

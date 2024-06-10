@@ -1,4 +1,4 @@
-package com.cobra.carapp.ui.fragments
+package com.cobra.connect.ui.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -8,10 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.cobra.carapp.callback.NotificationCallback
-import com.cobra.carapp.databinding.FragmentNotificationsBinding
-import com.cobra.carapp.ui.adapters.NotificationAdapter
-import com.cobra.carapp.utils.Constants.TAG
+import com.cobra.connect.callback.NotificationCallback
+import com.cobra.connect.databinding.FragmentNotificationsBinding
+import com.cobra.connect.ui.adapters.NotificationAdapter
+import com.cobra.connect.utils.Constants.TAG
 
 
 class NotificationsFragment : Fragment(), NotificationCallback {

@@ -1,13 +1,13 @@
-package com.cobra.carapp.ui.adapters
+package com.cobra.connect.ui.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.cobra.carapp.callback.ReportCallback
-import com.cobra.carapp.databinding.ReportItemViewBinding
-import com.cobra.carapp.databinding.ReportWeekendItemViewBinding
-import com.cobra.carapp.datamodels.ReportData
+import com.cobra.connect.callback.ReportCallback
+import com.cobra.connect.databinding.ReportItemViewBinding
+import com.cobra.connect.databinding.ReportWeekendItemViewBinding
+import com.cobra.connect.datamodels.ReportData
 
 class ReportAdapter(
     private val reportDataList: MutableList<ReportData>,

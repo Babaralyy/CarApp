@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.car.carapp.ui.fragments.MainFragment"
+        android:name="com.cobra.connect.ui.fragments.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.car.carapp.ui.fragments.RegisterFragment"
+        android:name="com.cobra.connect.ui.fragments.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.car.carapp.ui.fragments.DetailsFragment"
+        android:name="com.cobra.connect.ui.fragments.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" >
         <action
@@ -54,7 +54,7 @@
     </fragment>
     <fragment
         android:id="@+id/reportDetailFragment"
-        android:name="com.car.carapp.ui.fragments.ReportDetailFragment"
+        android:name="com.cobra.connect.ui.fragments.ReportDetailFragment"
         android:label="fragment_report_detail"
         tools:layout="@layout/fragment_report_detail" >
         <action
@@ -64,27 +64,27 @@
     </fragment>
     <fragment
         android:id="@+id/reportMapFragment"
-        android:name="com.car.carapp.ui.fragments.ReportMapFragment"
+        android:name="com.cobra.connect.ui.fragments.ReportMapFragment"
         android:label="fragment_report_map"
         tools:layout="@layout/fragment_report_map" />
     <fragment
         android:id="@+id/contactFragment"
-        android:name="com.car.carapp.ui.fragments.ContactFragment"
+        android:name="com.cobra.connect.ui.fragments.ContactFragment"
         android:label="fragment_contact"
         tools:layout="@layout/fragment_contact" />
     <fragment
         android:id="@+id/privacyFragment"
-        android:name="com.car.carapp.ui.fragments.PrivacyFragment"
+        android:name="com.cobra.connect.ui.fragments.PrivacyFragment"
         android:label="fragment_privacy"
         tools:layout="@layout/fragment_privacy" />
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="com.car.carapp.ui.fragments.AboutFragment"
+        android:name="com.cobra.connect.ui.fragments.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/otpFragment"
-        android:name="com.car.carapp.ui.fragments.OtpFragment"
+        android:name="com.cobra.connect.ui.fragments.OtpFragment"
         android:label="fragment_otp"
         tools:layout="@layout/fragment_otp" >
         <action
@@ -93,7 +93,7 @@
     </fragment>
     <fragment
         android:id="@+id/notificationDetailFragment"
-        android:name="com.car.carapp.ui.fragments.NotificationDetailFragment"
+        android:name="com.cobra.connect.ui.fragments.NotificationDetailFragment"
         android:label="fragment_notification_detail"
         tools:layout="@layout/fragment_notification_detail" />
 </navigation>

@@ -1,8 +1,8 @@
-package com.cobra.carapp.ui.activities
+package com.cobra.connect.ui.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.cobra.carapp.R
+import com.cobra.connect.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

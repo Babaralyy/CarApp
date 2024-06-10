@@ -1,4 +1,4 @@
-package com.cobra.carapp.ui.fragments
+package com.cobra.connect.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,9 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.navigation.fragment.findNavController
-import com.cobra.carapp.R
-import com.cobra.carapp.databinding.FragmentDetailsBinding
-import com.cobra.carapp.utils.Constants
+import com.cobra.connect.R
+import com.cobra.connect.databinding.FragmentDetailsBinding
+import com.cobra.connect.utils.Constants
 
 
 class DetailsFragment : Fragment() {

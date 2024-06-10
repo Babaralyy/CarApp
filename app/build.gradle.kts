@@ -5,17 +5,18 @@ plugins {
 }
 
 android {
-    namespace = "com.car.carapp"
+    namespace = "com.cobra.connect"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.car.carapp"
+        applicationId = "com.cobra.connect"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        resValue("string", "map_api_key", project.properties["Map_ApiKey"].toString())
     }
 
     buildFeatures {
@@ -47,7 +48,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

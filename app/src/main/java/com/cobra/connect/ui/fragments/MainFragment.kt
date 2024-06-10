@@ -1,4 +1,4 @@
-package com.cobra.carapp.ui.fragments
+package com.cobra.connect.ui.fragments
 
 import android.annotation.SuppressLint
 import android.app.Dialog
@@ -22,11 +22,11 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.car.carapp.R
-import com.car.carapp.databinding.ConfirmDialogLayBinding
-import com.car.carapp.databinding.FragmentMainBinding
-import com.cobra.carapp.utils.Constants
-import com.cobra.carapp.utils.Constants.TAG
+import com.cobra.connect.R
+import com.cobra.connect.databinding.ConfirmDialogLayBinding
+import com.cobra.connect.databinding.FragmentMainBinding
+import com.cobra.connect.utils.Constants
+import com.cobra.connect.utils.Constants.TAG
 import java.util.Locale
 
 
